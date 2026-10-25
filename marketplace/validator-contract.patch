@@ -1,0 +1,20 @@
+diff --git a/scripts/validate.mjs b/scripts/validate.mjs
+index d64a891..131425a 100644
+--- a/scripts/validate.mjs
++++ b/scripts/validate.mjs
+@@ -51,6 +51,7 @@ const KNOWN_PERMISSIONS = new Set([
+   "ui:timeline-row",
+   "ui:workspace-menu",
+   "ui:session-menu",
++  "ui:file-link-menu",
+   "ui:sidebar-entry",
+   "ui:center-tab",
+   "ui:conversation-mode",
+@@ -292,6 +293,7 @@ const CTX_PERMISSION_MAP = [
+   { api: "ui.openCenterTab", re: /\.ui\.openCenterTab\s*\(/, requires: "ui:center-tab" },
+   { api: "ui.registerWorkspaceMenuItem", re: /\.ui\.registerWorkspaceMenuItem\s*\(/, requires: "ui:workspace-menu" },
+   { api: "ui.registerSessionMenuItem", re: /\.ui\.registerSessionMenuItem\s*\(/, requires: "ui:session-menu" },
++  { api: "ui.registerFileLinkMenuItem", re: /\.ui\.registerFileLinkMenuItem\s*\(/, requires: "ui:file-link-menu" },
+   { api: "ui.registerOverlay", re: /\.ui\.registerOverlay\s*\(/, requires: "ui:overlay" },
+   { api: "ui.registerConversationMode", re: /\.ui\.registerConversationMode\s*\(/, requires: "ui:conversation-mode" },
+   // 通用名字的 namespace（models / sessions / window / storage / events …）必须

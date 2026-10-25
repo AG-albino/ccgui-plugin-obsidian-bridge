@@ -1,0 +1,23 @@
+{
+  "id": "obsidian-bridge",
+  "tier": "js",
+  "version": "1.0.0",
+  "minAppVersion": "1.1.7",
+  "sdkVersion": ">=0.3.22",
+  "permissions": [
+    "ui:file-link-menu",
+    "exec:powershell",
+    "exec:open",
+    "exec:xdg-open"
+  ],
+  "icon": "docs/icon.svg",
+  "screenshots": [
+    "docs/context-menu.png"
+  ],
+  "repo": "AG-albino/ccgui-plugin-obsidian-bridge",
+  "sha256": {
+    "main.js": "4e67fdbd535a899bd3b9c0adf29bae8e5db096ede3afeef978a9505bcad93534",
+    "manifest.json": "d1c2b4c3b1c98d4b316405dc066b41634ba3a91af8542fc5321e67ac48639fc8",
+    "styles.css": "87693b9839c808a3c73b7b03378f281c28df5047e3319e7c5ed3a34ec73f9f25"
+  }
+}

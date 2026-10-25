@@ -1,0 +1,7 @@
+{
+  "id": "obsidian-bridge",
+  "name": "Obsidian Bridge",
+  "description": "Open chat file links in their Obsidian vault, directly from the file context menu. Created by AG-albino.",
+  "author": "AG-albino",
+  "repo": "AG-albino/ccgui-plugin-obsidian-bridge"
+}
