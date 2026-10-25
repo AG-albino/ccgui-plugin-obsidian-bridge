@@ -1,0 +1,30 @@
+name: Draft release
+on:
+  push:
+    tags: ['[0-9]+.[0-9]+.[0-9]+']
+permissions:
+  contents: write
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - name: Check exact tag and manifest version
+        env:
+          TAG: ${{ github.ref_name }}
+        run: node --input-type=module -e "import fs from 'node:fs'; const m=JSON.parse(fs.readFileSync('manifest.json')); if(m.version!==process.env.TAG) process.exit(1)"
+      - run: npm test
+      - run: npm run validate
+      - run: npm run build
+      - run: |
+          cd dist
+          sha256sum --check checksums.txt
+          unzip -t obsidian-bridge-*.zip
+      - name: Create draft with reproducible artifacts
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ github.ref_name }}
+        run: gh release create "$TAG" dist/main.js dist/manifest.json dist/styles.css dist/checksums.txt "dist/obsidian-bridge-$TAG.zip" --verify-tag --draft --title "Obsidian Bridge $TAG — by AG-albino" --notes-file RELEASE_NOTES.md

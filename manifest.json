@@ -1,0 +1,13 @@
+{
+  "id": "obsidian-bridge",
+  "name": "Obsidian Bridge",
+  "version": "1.0.0",
+  "minAppVersion": "1.1.7",
+  "sdkVersion": ">=0.3.22",
+  "author": "AG-albino",
+  "description": "Open chat file links in their Obsidian vault, directly from the file context menu. Created by AG-albino.",
+  "tier": "js",
+  "permissions": ["ui:file-link-menu", "exec:powershell", "exec:open", "exec:xdg-open"],
+  "icon": "docs/icon.svg",
+  "screenshots": ["docs/context-menu.png"]
+}

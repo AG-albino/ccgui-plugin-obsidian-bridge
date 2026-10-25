@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
+  <rect width="256" height="256" rx="60" fill="#19151f"/>
+  <path d="M57 149 102 68h52l45 81-45 39h-52z" fill="#8b5cf6"/>
+  <path d="m102 68 26 81 26-81-26 120z" fill="#c4b5fd"/>
+  <path d="M64 212h128" stroke="#a78bfa" stroke-width="8" stroke-linecap="round"/>
+  <title>Obsidian Bridge by AG-albino</title>
+</svg>
